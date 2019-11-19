@@ -1,3 +1,9 @@
+%line {
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+}
+
 .sidebar {
     background-color: $color-primary;
     grid-column: sidebar-start / sidebar-end;
@@ -6,8 +12,36 @@
     display: flex;
     justify-content: center;
 
-    p{
-        writing-mode: tb-rl;
-        text-orientation: upright;
+    &__btn {
+        border: none;
+        border-radius: 0;
+        @extend %line;
+        margin-top: 4rem;
+
+        &::before,
+        &::after {
+            @extend %line;
+            content: "";
+            display: block;
+        }
+
+        &::before {
+            transform: translateY(-1.5rem);
+        }
+
+        &::after {
+            transform: translateY(1.3rem);
+        }
+
+        &-area {
+            border: none;
+            position: absolute;
+            top: 1%;
+            left: .5%;
+            width: 6rem;
+            height: 6rem;
+            background-color: transparent;
+            cursor: pointer;
+        }
     }
 }

@@ -75,15 +75,37 @@ body {
   background-color: #54483A;
   grid-column: full-start / col-end 6; }
 
+.sidebar__btn, .sidebar__btn::before, .sidebar__btn::after {
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem; }
+
 .sidebar {
   background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
   display: flex;
   justify-content: center; }
-  .sidebar p {
-    writing-mode: tb-rl;
-    text-orientation: upright; }
+  .sidebar__btn {
+    border: none;
+    border-radius: 0;
+    margin-top: 4rem; }
+    .sidebar__btn::before, .sidebar__btn::after {
+      content: "";
+      display: block; }
+    .sidebar__btn::before {
+      transform: translateY(-1.5rem); }
+    .sidebar__btn::after {
+      transform: translateY(1.3rem); }
+    .sidebar__btn-area {
+      border: none;
+      position: absolute;
+      top: 1%;
+      left: .5%;
+      width: 6rem;
+      height: 6rem;
+      background-color: transparent;
+      cursor: pointer; }
 
 .features {
   grid-column: center-start / center-end;
