@@ -30,7 +30,7 @@
             margin-bottom: 0;
         }
 
-        @media all and (max-device-width:$bp-medium) and (orientation:landscape) {
+        @media all and (max-device-width: $bp-medium) and (orientation: landscape) {
             grid-template-columns: repeat(3, min-content max-content);
             margin-bottom: 3rem;
         }
